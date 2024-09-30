@@ -37,13 +37,13 @@ func TestHome(t *testing.T) {
 	if err != nil {
 		t.Error(err)
 	}
-	if info.BuildTime != version.BuildTime {
+	if info.BuildTime != buildTime {
 		t.Errorf("BuildTime is wrong. Expected:%s, Got:%s", version.BuildTime, info.BuildTime)
 	}
-	if info.Commit != version.Commit {
+	if info.Commit != commit {
 		t.Errorf("Commit is wrong. Expected:%s, Got:%s", version.Commit, info.Commit)
 	}
-	if info.Release != version.Release {
+	if info.Release != release {
 		t.Errorf("Release is wrong. Expected:%s, Got:%s", version.Release, info.Release)
 	}
 }

@@ -1,6 +1,6 @@
 APP?=simpleservice
 PORT?=8080
-PROJECT?=https://github.com/andpostman/homeService/tree/dev
+PROJECT?=homeService
 
 RELEASE?=0.0.1
 COMMIT?=$(shell git rev-parse --short HEAD)
@@ -17,4 +17,4 @@ build: clean
 run: build
 	PORT=${PORT} ./${APP}
 test:
-	go test -v -race ./..
+	go test -v -race ./...
