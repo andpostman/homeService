@@ -8,7 +8,7 @@ import (
 
 func main() {
 	log.Print("Starting the webservice...")
-	router := handlers.Route()
+	router := handlers.Router()
 	log.Print("The service is ready to listen and serve.")
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
