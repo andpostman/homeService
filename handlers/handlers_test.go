@@ -7,7 +7,7 @@ import (
 )
 
 func TestRouter(t *testing.T) {
-	r := Router()
+	r := Router("", "", "")
 	server := httptest.NewServer(r)
 	defer server.Close()
 
